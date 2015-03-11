@@ -74,7 +74,7 @@ echo "DONE"
 sleep 2
 
 TGL=$(date +%Y-%m-%d)
-CODE=$(curl -d requestType="markHost" -d host="$IP" -d weight="100" -d date="$TGL" -d secretPhrase="$adore frame clock wow magic thought quick mess abuse husband country grow" http://127.0.0.1:7776/nhz | jq -r '.hallmark')
+CODE=$(curl -d requestType="markHost" -d host="$IP" -d weight="100" -d date="$TGL" -d secretPhrase="$2" http://127.0.0.1:7776/nhz | jq -r '.hallmark')
 sed -i s/nhz.myHallmark=/nhz.myHallmark=$CODE/g /root/horizon/hz/conf/nhz-default.properties
 sleep 2
 screen -S hallmarked -X quit
